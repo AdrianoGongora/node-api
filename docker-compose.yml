@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  node_app:
+    build: ./practica-express
+    ports:
+      - "3002:3002"
+
+  nginx:
+    build: ./nginx
+    ports:
+      -  "80:80"
+    depends_on:
+      - node_app
