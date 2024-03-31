@@ -10,5 +10,3 @@ services:
     build: ./nginx
     ports:
       -  "80:80"
-    depends_on:
-      - node_app
