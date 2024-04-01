@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY . ./
 
+CMD ["npm", "run", "build"]
+
 RUN npm install
 
 EXPOSE 3002
-
-CMD ["npm", "run", "build"]
 
 CMD ["npm", "start"]
