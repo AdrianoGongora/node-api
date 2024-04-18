@@ -17,7 +17,7 @@ const registerNewUser = async ({email, password, name}:User) => {
 
 const loginUser = async ({email, password}:Auth) => {
     const userExist = await UserModel.findOne({email});
-    if(!userExist) return "Maldita Mauricia no se encontro";
+    if(!userExist) return "Maldito Mauricio Escalante no se encontro";
 
     const passwordHas = userExist.password;
     const isDCorrect = await verified(password, passwordHas);
